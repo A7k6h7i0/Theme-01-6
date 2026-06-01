@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Avento Creative Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Raleway:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 70px; align-items: start; }
+    .faq-sidebar-card { background: var(--bg-light); border-radius: var(--radius-lg); padding: 36px; margin-bottom: 24px; }
+    .faq-sidebar-card h4 { margin-bottom: 14px; }
+    .faq-sidebar-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 18px; }
+    .faq-help-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 50px; }
+    .faq-help-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; transition: var(--transition); }
+    .faq-help-card:hover { border-color: var(--primary); box-shadow: var(--shadow-sm); }
+    .faq-help-card i { font-size: 1.6rem; color: var(--primary); margin-bottom: 14px; display: block; }
+    .faq-help-card h4 { font-size: 0.95rem; margin-bottom: 8px; }
+    .faq-help-card p { font-size: 0.85rem; color: var(--text-light); margin: 0; }
+    @media(max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-help-cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="nav-logo" href="index.html">
+        <div class="logo-mark"><i class="fa-solid fa-bolt"></i></div>Avento
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=80');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <h1>Frequently Asked Questions</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>FAQ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Got Questions?</span>
+        <h2>Everything You Need to Know</h2>
+        <p>Can't find your answer? Reach out to us directly and we'll get back to you within one business day.</p>
+        <div class="divider"><span></span><span></span><span></span></div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="faq-tabs reveal">
+        <button class="faq-tab active" data-cat="all">All Questions</button>
+        <button class="faq-tab" data-cat="general">General</button>
+        <button class="faq-tab" data-cat="pricing">Pricing</button>
+        <button class="faq-tab" data-cat="process">Our Process</button>
+        <button class="faq-tab" data-cat="support">Support</button>
+        <button class="faq-tab" data-cat="technical">Technical</button>
+      </div>
+
+      <div class="faq-layout">
+        <!-- FAQ Accordions -->
+        <div>
+          <!-- GENERAL -->
+          <div class="accordion-item" data-category="general">
+            <div class="accordion-header">
+              <h4>What kind of clients do you work with?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>We work with a wide range of clients — from early-stage startups and scale-ups to established enterprises and global brands. What matters most to us is not the size of the company but the quality of the challenge and the alignment in values. We love working with founders and teams who are ambitious, collaborative, and believe that great design is a strategic asset.</p>
+                <p>Our clients span industries including fintech, health & wellness, retail, hospitality, technology, professional services, and consumer goods.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="general">
+            <div class="accordion-header">
+              <h4>How long has Avento been in business?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Avento was founded in 2012 in Brooklyn, New York. Over the past 14 years, we have grown from a two-person design studio into a 28-person full-service creative agency. We have completed more than 320 projects for clients in 14 countries and won 46 industry awards along the way.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="general">
+            <div class="accordion-header">
+              <h4>Do you work with clients outside the United States?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Absolutely. We have worked with clients across North America, Europe, Asia-Pacific, and the Middle East. Our team is fully distributed and experienced in working across time zones. We use async-first communication tools and schedule regular video calls to ensure seamless collaboration regardless of where you are in the world.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRICING -->
+          <div class="accordion-item" data-category="pricing">
+            <div class="accordion-header">
+              <h4>How much does a typical project cost?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Project investment varies depending on scope, complexity, and timeline. As a general guide:</p>
+                <ul style="margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 0.93rem;">
+                  <li><strong>Brand Identity:</strong> $4,000 – $18,000</li>
+                  <li><strong>Marketing Website:</strong> $8,000 – $35,000</li>
+                  <li><strong>E-Commerce Platform:</strong> $12,000 – $60,000</li>
+                  <li><strong>Mobile App:</strong> $25,000 – $120,000</li>
+                  <li><strong>Full Brand + Website:</strong> $15,000 – $50,000</li>
+                </ul>
+                <p>Every project starts with a free discovery call where we scope your requirements accurately and provide a fixed-price proposal. We never surprise you with hidden costs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="pricing">
+            <div class="accordion-header">
+              <h4>Do you offer payment plans?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Yes. Standard project payments are structured as: 40% at project kickoff, 40% at the midpoint design approval stage, and 20% on final delivery. For larger projects (over $20,000), we can discuss quarterly payment structures. We accept bank transfer, credit card, and Wise for international clients.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="pricing">
+            <div class="accordion-header">
+              <h4>Are there ongoing costs after project delivery?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>The project fee covers design, development, and delivery. After launch, you may choose to invest in hosting (which we can arrange), ongoing maintenance retainers, or marketing services — but none of these are mandatory. We offer three support tiers: a basic plan ($299/month), a growth plan ($799/month), and a priority plan ($1,499/month). Details are outlined in your project proposal.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROCESS -->
+          <div class="accordion-item" data-category="process">
+            <div class="accordion-header">
+              <h4>How long does a typical project take?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Timelines depend on scope and complexity. Here are typical ranges:</p>
+                <ul style="margin: 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 0.93rem;">
+                  <li><strong>Brand Identity:</strong> 4 – 8 weeks</li>
+                  <li><strong>Marketing Website (5–10 pages):</strong> 6 – 10 weeks</li>
+                  <li><strong>Complex Website (15+ pages):</strong> 10 – 16 weeks</li>
+                  <li><strong>Mobile App:</strong> 16 – 26 weeks</li>
+                  <li><strong>E-Commerce Platform:</strong> 10 – 20 weeks</li>
+                </ul>
+                <p>We always define a clear timeline in the proposal and use project management tools (Notion + Linear) to keep everything on track and visible to you throughout.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="process">
+            <div class="accordion-header">
+              <h4>How involved will I need to be during the project?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>We designed our process to be efficient with your time while keeping you genuinely informed. Expect structured touchpoints at key milestones — typically a kickoff session, a design review at 30%, a major checkpoint at 60%, and a pre-launch review. Outside of these, we work asynchronously and consolidate feedback into clear, time-boxed rounds. Most clients invest 2–3 hours per week during active phases.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="process">
+            <div class="accordion-header">
+              <h4>How many rounds of revisions are included?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Our standard projects include two structured revision rounds per major deliverable. In practice, by the time we reach a formal revision round, we are already well-aligned thanks to our ongoing communication — so most projects are approved without needing all available revisions. Revisions beyond the included rounds are billed at our hourly rate, which is disclosed upfront in your contract.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUPPORT -->
+          <div class="accordion-item" data-category="support">
+            <div class="accordion-header">
+              <h4>What happens after the project is launched?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Every project includes a 30-day post-launch support window at no extra charge. During this period, we address any bugs, browser compatibility issues, or minor adjustments that arise. After that, you can either manage independently (we provide full documentation and training), or move to one of our support retainer plans for ongoing care, updates, and growth services.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="support">
+            <div class="accordion-header">
+              <h4>Do you provide training on how to use our website or app?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Yes, always. Every project delivery includes a live training session (recorded for your reference), detailed written documentation, and video walkthroughs of your CMS or admin panel. We want you to feel completely confident managing your own digital presence — and we are always available for follow-up questions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TECHNICAL -->
+          <div class="accordion-item" data-category="technical">
+            <div class="accordion-header">
+              <h4>What technologies do you build with?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Our technology choices are always driven by your project's specific requirements, not personal preference. We are fluent across a wide stack including React, Next.js, Vue.js, Node.js, Python/Django, WordPress, Shopify, Sanity, Contentful, PostgreSQL, MongoDB, AWS, Vercel, and more. For mobile, we work with Swift (iOS), Kotlin (Android), React Native, and Flutter. We will always recommend the right tool for your job.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="technical">
+            <div class="accordion-header">
+              <h4>Will my website be optimized for search engines?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>Yes. All websites we build include foundational technical SEO as standard: clean semantic HTML, proper heading hierarchy, Open Graph meta tags, schema markup, XML sitemap, robots.txt configuration, performance optimization, and Core Web Vitals alignment. For clients who want to pursue aggressive SEO growth, we offer dedicated SEO strategy and content services as an add-on or retainer.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="technical">
+            <div class="accordion-header">
+              <h4>Who owns the source code and design files?</h4>
+              <div class="accordion-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <p>You do. Upon final payment, all intellectual property — source code, design files (Figma), assets, and documentation — transfers fully to you. We retain the right to showcase the work in our portfolio unless you request otherwise via a mutual NDA. We believe your investment should result in full ownership, full stop.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="faq-sidebar-card reveal">
+            <i class="fa-solid fa-comments" style="font-size: 2rem; color: var(--primary); margin-bottom: 14px; display: block;"></i>
+            <h4>Still Have Questions?</h4>
+            <p>Our team typically responds to all enquiries within 4 business hours. We're real people who love talking about your project.</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Send a Message</a>
+          </div>
+
+          <div class="faq-sidebar-card reveal" style="background: var(--dark); color: rgba(255,255,255,0.7);">
+            <i class="fa-solid fa-phone" style="font-size: 2rem; color: var(--primary); margin-bottom: 14px; display: block;"></i>
+            <h4 style="color: #fff;">Book a Free Call</h4>
+            <p style="color: rgba(255,255,255,0.6);">Talk to Marcus or Sophia directly. No sales scripts — just an honest conversation about your project and how we can help.</p>
+            <a href="contact.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Schedule Call</a>
+          </div>
+
+          <div class="faq-sidebar-card reveal">
+            <h4>Business Hours</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+              <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700; color: var(--heading);">Monday – Friday</span><span>9am – 6pm EST</span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700; color: var(--heading);">Saturday</span><span>10am – 2pm EST</span></div>
+              <div style="display: flex; justify-content: space-between;"><span style="font-weight: 700; color: var(--heading);">Sunday</span><span style="color: var(--primary);">Closed</span></div>
+            </div>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.88rem;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: var(--primary);"></i> +1 (555) 891 2340</div>
+              <div style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-envelope" style="color: var(--primary);"></i> hello@avento.studio</div>
+            </div>
+          </div>
+
+          <div class="faq-sidebar-card reveal">
+            <h4>Popular Resources</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <a href="blog.html" style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text); transition: color 0.3s; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                <i class="fa-solid fa-book-open" style="color: var(--primary);"></i> Read Our Blog
+              </a>
+              <a href="portfolio.html" style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text); transition: color 0.3s; padding: 10px 0; border-bottom: 1px solid var(--border);">
+                <i class="fa-solid fa-folder-open" style="color: var(--primary);"></i> View Our Portfolio
+              </a>
+              <a href="services.html" style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text); transition: color 0.3s; padding: 10px 0;">
+                <i class="fa-solid fa-list-check" style="color: var(--primary);"></i> Explore Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help cards at bottom -->
+      <div class="section-heading reveal mt-50">
+        <span class="label">Need More Help?</span>
+        <h2>Other Ways to Reach Us</h2>
+      </div>
+      <div class="faq-help-cards">
+        <div class="faq-help-card reveal delay-100">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>Email Support</h4>
+          <p>Send us a detailed message and receive a comprehensive response within 4 business hours from a senior team member.</p>
+          <a href="contact.html" class="service-link mt-10" style="display: inline-flex;">Send Email <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="faq-help-card reveal delay-200">
+          <i class="fa-solid fa-video"></i>
+          <h4>Video Consultation</h4>
+          <p>Book a free 30-minute Zoom call with our creative team. No commitment required — just a genuine conversation about your needs.</p>
+          <a href="contact.html" class="service-link mt-10" style="display: inline-flex;">Book Call <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="faq-help-card reveal delay-300">
+          <i class="fa-solid fa-file-contract"></i>
+          <h4>Request a Proposal</h4>
+          <p>Share your project brief and we'll send back a detailed proposal with timeline, scope, and fixed pricing within 48 hours.</p>
+          <a href="contact.html" class="service-link mt-10" style="display: inline-flex;">Get Proposal <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="faq-help-card reveal delay-400">
+          <i class="fa-brands fa-slack"></i>
+          <h4>Client Slack Channel</h4>
+          <p>Existing clients get direct access to their project team via a dedicated Slack channel. Real-time answers, no email chains.</p>
+          <a href="contact.html" class="service-link mt-10" style="display: inline-flex;">Become a Client <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-content reveal">
+        <span style="display:inline-block;font-size:0.78rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary-light);margin-bottom:16px;">Let's Get Started</span>
+        <h2>Your Questions Are Answered. <br>Now Let's Build Something Amazing.</h2>
+        <p>Every great project starts with a conversation. Book your free 30-minute strategy call today.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book Free Call</a>
+          <a href="portfolio.html" class="btn btn-outline-white btn-lg">See Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="margin-bottom:18px;display:inline-flex;gap:10px;align-items:center;font-family:Raleway,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;text-decoration:none;">
+            <div style="width:34px;height:34px;background:var(--primary);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;"><i class="fa-solid fa-bolt"></i></div>Avento
+          </a>
+          <p class="footer-tagline">A creative agency building powerful brands and exceptional digital experiences.</p>
+          <div class="footer-social"><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-dribbble"></i></a></div>
+        </div>
+        <div class="footer-col"><h5>Company</h5><div class="footer-links"><a href="about.html">About Us</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
+        <div class="footer-col"><h5>Services</h5><div class="footer-links"><a href="services.html">Brand Identity</a><a href="services.html">Web Design</a><a href="services.html">Development</a><a href="services.html">Mobile Apps</a><a href="services.html">SEO & Marketing</a><a href="services.html">Video Production</a></div></div>
+        <div class="footer-col"><h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>350 Fifth Ave, Suite 4800<br>New York, NY 10118</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (555) 891 2340</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@avento.studio</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <span>&copy; 2026 Avento Studio. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Avento Creative Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Raleway:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .portfolio-grid-full { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .portfolio-item-lg { grid-column: span 2; }
+    .portfolio-item-lg .portfolio-item { aspect-ratio: 16/9; }
+    .case-study { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .case-study:last-child { border-bottom: none; }
+    .case-study-img { border-radius: var(--radius-lg); overflow: hidden; }
+    .case-study-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.5s ease; }
+    .case-study-img:hover img { transform: scale(1.04); }
+    .case-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .case-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--bg-light); color: var(--primary); padding: 5px 12px; border-radius: 50px; }
+    .case-study-text h2 { font-size: 1.9rem; margin-bottom: 16px; }
+    .case-study-text p { margin-bottom: 16px; color: var(--text); }
+    .case-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+    .case-result { background: var(--bg-light); border-radius: var(--radius); padding: 18px 16px; text-align: center; }
+    .case-result .num { display: block; font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--primary); }
+    .case-result .lbl { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-top: 4px; }
+    @media(max-width: 900px) {
+      .portfolio-item-lg { grid-column: span 1; }
+      .portfolio-item-lg .portfolio-item { aspect-ratio: 4/3; }
+      .portfolio-grid-full { grid-template-columns: 1fr 1fr; }
+      .case-study { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media(max-width: 640px) { .portfolio-grid-full { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="nav-logo" href="index.html">
+        <div class="logo-mark"><i class="fa-solid fa-bolt"></i></div>Avento
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1920&q=80');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <h1>Our Portfolio</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Portfolio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Our Work</span>
+        <h2>320+ Projects, Each One Remarkable</h2>
+        <p>A curated selection of our best work across branding, web, mobile, and digital marketing. Every project tells a unique story.</p>
+        <div class="divider"><span></span><span></span><span></span></div>
+      </div>
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="photography">Photography</button>
+        <button class="filter-btn" data-filter="motion">Motion</button>
+      </div>
+
+      <div class="portfolio-grid-full">
+        <div class="portfolio-item-lg reveal delay-100">
+          <div class="portfolio-item" data-category="web">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80" alt="Apex Finance Platform" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Web Design & Development</span>
+              <h3>Apex Finance Platform</h3>
+            </div>
+            <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-200" data-category="branding">
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Luminary Brand Identity" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Branding</span>
+            <h3>Luminary Brand Identity</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item reveal delay-100" data-category="mobile">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Pulse Health App" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Mobile App</span>
+            <h3>Pulse Health App</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item reveal delay-200" data-category="branding">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Verdant Coffee Branding" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Branding</span>
+            <h3>Verdant Coffee Co.</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item-lg reveal delay-300">
+          <div class="portfolio-item" data-category="photography">
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&q=80" alt="Horizon Architecture" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Photography</span>
+              <h3>Horizon Architecture Series</h3>
+            </div>
+            <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-100" data-category="web">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80" alt="Nova E-Commerce" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">E-Commerce</span>
+            <h3>Nova Fashion Store</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item reveal delay-200" data-category="motion">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="TechNova Brand Film" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Motion & Video</span>
+            <h3>TechNova Brand Film</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item reveal delay-300" data-category="mobile">
+          <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80" alt="Bloom Social App" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Mobile App</span>
+            <h3>Bloom Social Platform</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="portfolio-item reveal delay-100" data-category="branding">
+          <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=800&q=80" alt="Solstice Hotel Brand" />
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Branding</span>
+            <h3>Solstice Hotel Collection</h3>
+          </div>
+          <div class="portfolio-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CASE STUDIES -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Deep Dives</span>
+        <h2>Featured Case Studies</h2>
+        <p>A closer look at some of our most impactful projects — the challenge, the solution, and the results.</p>
+        <div class="divider"><span></span><span></span><span></span></div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-img reveal-left">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80" alt="Apex Finance" />
+        </div>
+        <div class="case-study-text reveal-right">
+          <div class="case-meta">
+            <span class="case-tag">Web Design</span>
+            <span class="case-tag">Development</span>
+            <span class="case-tag">SEO</span>
+          </div>
+          <h2>Apex Finance — Digital Platform Redesign</h2>
+          <p>Apex Finance came to us with a legacy platform that was costing them clients. The 8-year-old codebase was slow, the UX was confusing, and mobile performance was catastrophic. They needed a complete rebuild, fast.</p>
+          <p>We designed and built a new platform from the ground up in 14 weeks — complete with a custom dashboard, real-time data visualisation, and a seamless onboarding flow that reduced drop-off by 68%.</p>
+          <div class="case-results">
+            <div class="case-result"><span class="num">+340%</span><span class="lbl">Organic Traffic</span></div>
+            <div class="case-result"><span class="num">-68%</span><span class="lbl">Drop-off Rate</span></div>
+            <div class="case-result"><span class="num">2.4×</span><span class="lbl">Conversion Rate</span></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Start Similar Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="case-study" style="direction: rtl;">
+        <div class="case-study-img reveal-right" style="direction: ltr;">
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80" alt="Luminary Brand" />
+        </div>
+        <div class="case-study-text reveal-left" style="direction: ltr;">
+          <div class="case-meta">
+            <span class="case-tag">Brand Identity</span>
+            <span class="case-tag">Strategy</span>
+            <span class="case-tag">Print</span>
+          </div>
+          <h2>Luminary — Complete Brand Identity System</h2>
+          <p>Luminary was a fast-growing VC-backed startup with a brilliant product but zero visual identity. They needed a brand that could stand alongside the big players in their space while still feeling fresh and founder-led.</p>
+          <p>Over 8 weeks, we developed a full brand identity system — from logo and colour palette through to a comprehensive 80-page brand guidelines document, packaging design, and a complete digital asset library.</p>
+          <div class="case-results">
+            <div class="case-result"><span class="num">$18M</span><span class="lbl">Series B Raised</span></div>
+            <div class="case-result"><span class="num">+220%</span><span class="lbl">Brand Recall</span></div>
+            <div class="case-result"><span class="num">3 Wks</span><span class="lbl">To Market</span></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Start Similar Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-img reveal-left">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80" alt="Pulse Health App" />
+        </div>
+        <div class="case-study-text reveal-right">
+          <div class="case-meta">
+            <span class="case-tag">iOS & Android</span>
+            <span class="case-tag">UX Design</span>
+            <span class="case-tag">Backend API</span>
+          </div>
+          <h2>Pulse — Health & Wellness Mobile App</h2>
+          <p>Pulse needed a companion app for their connected fitness devices. The challenge: designing a deeply personal health tracking experience that motivates without overwhelming, for users ranging from casual walkers to competitive athletes.</p>
+          <p>We delivered a dual-platform app with an adaptive UI that adjusts based on user activity level, personalized insights powered by ML, and a social layer that drives community engagement and retention.</p>
+          <div class="case-results">
+            <div class="case-result"><span class="num">4.8★</span><span class="lbl">App Store Rating</span></div>
+            <div class="case-result"><span class="num">280K</span><span class="lbl">Downloads Yr 1</span></div>
+            <div class="case-result"><span class="num">71%</span><span class="lbl">30-Day Retention</span></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Start Similar Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-content reveal">
+        <span style="display:inline-block;font-size:0.78rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary-light);margin-bottom:16px;">Your Project Next?</span>
+        <h2>Let's Add Your Project <br>to This Collection</h2>
+        <p>Every project here started with a single conversation. Yours could be next.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="margin-bottom:18px;display:inline-flex;gap:10px;align-items:center;font-family:Raleway,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;text-decoration:none;">
+            <div style="width:34px;height:34px;background:var(--primary);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;"><i class="fa-solid fa-bolt"></i></div>Avento
+          </a>
+          <p class="footer-tagline">A creative agency building powerful brands and exceptional digital experiences for ambitious businesses worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Company</h5><div class="footer-links"><a href="about.html">About Us</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
+        <div class="footer-col"><h5>Services</h5><div class="footer-links"><a href="services.html">Brand Identity</a><a href="services.html">Web Design</a><a href="services.html">Development</a><a href="services.html">Mobile Apps</a><a href="services.html">SEO & Marketing</a><a href="services.html">Video Production</a></div></div>
+        <div class="footer-col"><h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>350 Fifth Ave, Suite 4800<br>New York, NY 10118</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (555) 891 2340</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@avento.studio</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <span>&copy; 2026 Avento Studio. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close"><i class="fa-solid fa-xmark"></i></span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Portfolio preview" />
+  </div>
+  <a class="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  <script src="js/main.js"></script>
+</body>
+</html>

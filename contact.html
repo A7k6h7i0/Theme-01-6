@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Avento Creative Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Raleway:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .form-success { display: none; text-align: center; padding: 40px 20px; }
+    .form-success i { font-size: 3rem; color: var(--primary); margin-bottom: 16px; display: block; }
+    .offices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .office-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition); }
+    .office-card:hover { box-shadow: var(--shadow); transform: translateY(-5px); border-color: transparent; }
+    .office-img { aspect-ratio: 16/9; overflow: hidden; }
+    .office-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .office-card:hover .office-img img { transform: scale(1.05); }
+    .office-info { padding: 24px; }
+    .office-info h4 { margin-bottom: 6px; }
+    .office-info .city { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 12px; }
+    .office-info p { font-size: 0.87rem; color: var(--text-light); margin: 0; }
+    @media(max-width: 900px) { .offices-grid { grid-template-columns: 1fr; } }
+    @media(max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="nav-logo" href="index.html">
+        <div class="logo-mark"><i class="fa-solid fa-bolt"></i></div>Avento
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta active">Get In Touch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80');"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <h1>Get In Touch</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CARDS -->
+  <section class="section-sm section-gray">
+    <div class="container">
+      <div class="contact-cards-grid">
+        <div class="contact-card reveal delay-100">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+          <h4>Call Us</h4>
+          <p>Monday–Friday, 9am–6pm EST. We love talking about new projects over a quick call.</p>
+          <div class="info">+1 (555) 891 2340</div>
+        </div>
+        <div class="contact-card reveal delay-200">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h4>Email Us</h4>
+          <p>Send us a message and our team will respond within 4 business hours, guaranteed.</p>
+          <div class="info">hello@avento.studio</div>
+        </div>
+        <div class="contact-card reveal delay-300">
+          <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h4>Visit Our Studio</h4>
+          <p>Come see us by appointment at our New York studio. Coffee is always on.</p>
+          <div class="info">350 Fifth Ave, New York, NY</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form reveal-left">
+          <h3>Send Us a Message</h3>
+          <p style="color: var(--text-light); font-size: 0.93rem; margin-bottom: 28px;">Fill in the form below and we'll get back to you within 4 business hours with a thoughtful response — not a template reply.</p>
+
+          <div id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="john@company.com" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+1 (555) 000 0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Company / Organization</label>
+              <input type="text" placeholder="Your company name" />
+            </div>
+            <div class="form-group">
+              <label>Service You're Interested In *</label>
+              <select>
+                <option value="" disabled selected>Select a service</option>
+                <option>Brand Identity Design</option>
+                <option>Web Design & Development</option>
+                <option>Mobile App Development</option>
+                <option>E-Commerce Solution</option>
+                <option>SEO & Digital Marketing</option>
+                <option>Motion & Video Production</option>
+                <option>Full-Service Partnership</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Estimated Budget</label>
+                <select>
+                  <option value="" disabled selected>Select a range</option>
+                  <option>Under $5,000</option>
+                  <option>$5,000 – $15,000</option>
+                  <option>$15,000 – $30,000</option>
+                  <option>$30,000 – $60,000</option>
+                  <option>$60,000 – $100,000</option>
+                  <option>$100,000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Desired Start Date</label>
+                <input type="text" placeholder="e.g. July 2026 or ASAP" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tell Us About Your Project *</label>
+              <textarea rows="6" placeholder="Describe your project, goals, and any specific requirements or questions you have for us..." required></textarea>
+            </div>
+            <div class="form-group" style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+              <input type="checkbox" id="agree" style="width: auto; margin-top: 4px; flex-shrink: 0;" />
+              <label for="agree" style="font-size: 0.85rem; text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--text-light); cursor: pointer;">I agree to Avento's <a href="#" style="color: var(--primary);">Privacy Policy</a> and consent to being contacted about my enquiry.</label>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" id="submit-btn" style="width: 100%; justify-content: center;" onclick="submitForm()">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+
+          <div class="form-success" id="form-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Message Sent!</h3>
+            <p style="color: var(--text-light);">Thank you for reaching out. A member of our team will be in touch within 4 business hours.</p>
+          </div>
+        </div>
+
+        <!-- Info Side -->
+        <div class="contact-info-box reveal-right">
+          <h3>Why Work With Avento?</h3>
+          <p>We know there are a lot of agencies out there. Here's why our clients choose us — and keep coming back.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h5>Fast Response</h5>
+              <p>We respond to every new enquiry within 4 business hours. No autoresponders, no holding queues — a real person, a real answer.</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-lock"></i></div>
+            <div>
+              <h5>Confidential by Default</h5>
+              <p>We treat every project and brief as strictly confidential. NDAs are available on request at no charge and before any information is shared.</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div>
+              <h5>Fixed-Price Proposals</h5>
+              <p>No hourly billing surprises. Every engagement starts with a detailed fixed-price proposal that you approve before we spend a single minute on your project.</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div>
+              <h5>Proven Track Record</h5>
+              <p>320+ completed projects. 148 satisfied clients. 46 industry awards. Our work speaks for itself — but we're always happy to let our clients speak for us too.</p>
+            </div>
+          </div>
+
+          <div class="contact-detail" style="border-bottom: none;">
+            <div class="contact-detail-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h5>Free Strategy Session</h5>
+              <p>Every new project starts with a free 30-minute discovery call where we ask all the right questions and give you our honest assessment of how to move forward.</p>
+            </div>
+          </div>
+
+          <!-- Testimonial snippet -->
+          <div style="background: var(--bg-light); border-radius: var(--radius-lg); padding: 28px; margin-top: 36px;">
+            <div style="font-size: 2.5rem; color: var(--primary); opacity: 0.3; line-height: 1; font-family: Georgia; margin-bottom: -10px;">"</div>
+            <p style="font-style: italic; color: var(--heading); font-size: 0.95rem; line-height: 1.8; margin-bottom: 18px;">From the first call to the final delivery, Avento was an absolute pleasure to work with. They understood exactly what we needed, challenged us in the right ways, and delivered results that exceeded every expectation.</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="David" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;" />
+              <div>
+                <strong style="font-size: 0.9rem; display: block; color: var(--heading);">David Harrington</strong>
+                <span style="font-size: 0.8rem; color: var(--text-light);">CEO, Harrington Capital Group</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section style="padding: 0 0 80px;">
+    <div class="container">
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617!2d-73.98566!3d40.74844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xaca05ca48ab8c1d3!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Avento Studio Location"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICES -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="label">Our Presence</span>
+        <h2>Global Studios, Local Expertise</h2>
+        <p>While New York is home, we have teams and partnerships across three continents to serve clients wherever they are.</p>
+        <div class="divider"><span></span><span></span><span></span></div>
+      </div>
+      <div class="offices-grid">
+        <div class="office-card reveal delay-100">
+          <div class="office-img">
+            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80" alt="New York Office" />
+          </div>
+          <div class="office-info">
+            <span class="city">Headquarters</span>
+            <h4>New York City</h4>
+            <p>350 Fifth Avenue, Suite 4800<br>New York, NY 10118<br>+1 (555) 891 2340</p>
+          </div>
+        </div>
+        <div class="office-card reveal delay-200">
+          <div class="office-img">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700&q=80" alt="London Office" />
+          </div>
+          <div class="office-info">
+            <span class="city">European Hub</span>
+            <h4>London, UK</h4>
+            <p>25 Canada Square, Canary Wharf<br>London, E14 5LQ, UK<br>+44 20 7946 0958</p>
+          </div>
+        </div>
+        <div class="office-card reveal delay-300">
+          <div class="office-img">
+            <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?w=700&q=80" alt="Singapore Office" />
+          </div>
+          <div class="office-info">
+            <span class="city">Asia-Pacific Hub</span>
+            <h4>Singapore</h4>
+            <p>1 Raffles Place, #40-02<br>Singapore 048616<br>+65 6221 8888</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section">
+    <div class="container container-sm">
+      <div style="text-align: center;" class="reveal">
+        <span class="label" style="color: var(--primary);">Stay in the Loop</span>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p style="color: var(--text-light); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto;">Get our latest case studies, design insights, and agency news delivered to your inbox every two weeks. No spam — ever.</p>
+        <div style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+          <input type="email" placeholder="Your email address" style="flex: 1; padding: 14px 20px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 0.95rem; outline: none; font-family: inherit; min-width: 200px;" />
+          <button class="btn btn-primary">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 14px;">Join 4,200+ designers, founders, and marketers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="margin-bottom:18px;display:inline-flex;gap:10px;align-items:center;font-family:Raleway,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;text-decoration:none;">
+            <div style="width:34px;height:34px;background:var(--primary);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;"><i class="fa-solid fa-bolt"></i></div>Avento
+          </a>
+          <p class="footer-tagline">A creative agency building powerful brands and exceptional digital experiences for ambitious businesses worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Company</h5><div class="footer-links"><a href="about.html">About Us</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
+        <div class="footer-col"><h5>Services</h5><div class="footer-links"><a href="services.html">Brand Identity</a><a href="services.html">Web Design</a><a href="services.html">Development</a><a href="services.html">Mobile Apps</a><a href="services.html">SEO & Marketing</a><a href="services.html">Video Production</a></div></div>
+        <div class="footer-col"><h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>350 Fifth Ave, Suite 4800<br>New York, NY 10118</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+1 (555) 891 2340</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>hello@avento.studio</span></div>
+          <div class="footer-contact-item"><i class="fa-regular fa-clock"></i><span>Mon–Fri: 9am – 6pm EST</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <span>&copy; 2026 Avento Studio. All rights reserved.</span>
+        <span>Crafted with <span style="color:var(--primary);">&#9829;</span> in New York City</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  <script src="js/main.js"></script>
+  <script>
+    function submitForm() {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
